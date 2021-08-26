@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5000;
+const localPort = 5000;
 
 /* sign in */
 app.post("/signin", (req, res) => {
@@ -17,6 +17,4 @@ app.get("/", (req, res) => {
 });
 
 /* litsen on port 5000 */
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || localPort);
