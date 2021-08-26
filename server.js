@@ -7,11 +7,20 @@ app.post("/signin", (req, res) => {
   res.send("in 200");
 });
 
-/* sign up*/
-app.post("/signup", (req, res) => {
-  res.send("up 200");
+app.get("/signin", (req, res) => {
+  res.send("signin page");
 });
 
+/* sign up*/
+app.post("/signup", (req, res) => {
+  res.send("up 200" + "req.body");
+});
+
+app.get("/signup", (req, res) => {
+  res.send("signup page");
+});
+
+/* home page*/
 app.get("/", (req, res) => {
   res.send("home page");
 });
