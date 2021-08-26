@@ -1,9 +1,13 @@
 const express = require("express");
-//var cors = require("cors");
+var cors = require("cors");
 
 const app = express();
-//app.use(cors());
-const localPort = 5000;
+app.use(
+  cors({
+    origin: "https://frontend-test13579.herokuapp.com/",
+    methods: ["GET", "POST"],
+  })
+);
 
 /* sign in */
 app.post("/signin", (req, res) => {
@@ -16,7 +20,7 @@ app.get("/signin", (req, res) => {
 
 /* sign up*/
 app.post("/signup", (req, res) => {
-  res.send("up 200" + "req.body");
+  res.send("up 200");
 });
 
 app.get("/signup", (req, res) => {
@@ -29,4 +33,4 @@ app.get("/", (req, res) => {
 });
 
 /* litsen on port 5000 */
-app.listen(process.env.PORT || localPort);
+app.listen(process.env.PORT || 5000);
