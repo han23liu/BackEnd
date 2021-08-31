@@ -2,15 +2,15 @@ const express = require("express");
 var cors = require("cors");
 
 const app = express();
-app.use(
-  cors({
-    origin: "https://frontend-test13579.herokuapp.com/",
-  })
-);
+app.use(cors());
 
 /* sign in */
 app.post("/signin", (req, res) => {
   console.log("singin post");
+  response.set(
+    "Access-Control-Allow-Origin",
+    "https://frontend-test13579.herokuapp.com"
+  );
   res.send("in 200");
 });
 
