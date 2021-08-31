@@ -4,7 +4,7 @@ var cors = require("cors");
 const app = express();
 
 let corsOptions = {
-  origin: "https://frontend-test13579.herokuapp.com/",
+  origin: "https://front-test-app.herokuapp.com/",
   optionsSuccessStatus: 200,
 };
 
