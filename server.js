@@ -1,14 +1,15 @@
 const express = require("express");
 var cors = require("cors");
-
 const app = express();
 
-let corsOptions = {
-  origin: "https://front-test-app.herokuapp.com/",
+var corsOptions = {
+  origin: "https://frontend-test3.herokuapp.com/",
+  methods: ["GET", "POST"],
   optionsSuccessStatus: 200,
 };
 
 /* sign in */
+app.options("/signin", cors(corsOptions));
 app.post("/signin", cors(corsOptions), (req, res) => {
   res.send("in 200");
 });
@@ -19,7 +20,8 @@ app.get("/signin", (req, res) => {
 });
 
 /* sign up*/
-app.post("/signup", (req, res) => {
+app.options("/signup", cors(corsOptions));
+app.post("/signup", cors(corsOptions), (req, res) => {
   console.log("singup post");
   res.send("up 200");
 });
