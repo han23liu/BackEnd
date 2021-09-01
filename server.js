@@ -3,7 +3,7 @@ var cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "https://frontend-test3.herokuapp.com",
+  origin: "http://localhost:3000",
   methods: ["GET", "POST"],
   optionsSuccessStatus: 200,
 };
@@ -32,4 +32,4 @@ app.get("/signup", (req, res) => {
 });
 
 /* litsen on port process.env.PORT || 5000 */
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
