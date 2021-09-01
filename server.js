@@ -3,7 +3,7 @@ var cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://frontend-test3.herokuapp.com",
   methods: ["GET", "POST"],
   optionsSuccessStatus: 200,
 };
