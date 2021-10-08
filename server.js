@@ -50,13 +50,13 @@ app.listen(process.env.PORT || 5000);
 
 /* login response data */
 const logInData = {
-  token: "5d4f5sd4f65s4da6f546sd54f65sda4f65sd4af54",
+  token: "5d4f5sd4f65s4da6f546sd54f65sda4f65sd4af54asd",
   userId: "123456",
 };
 
 /* register response data */
 const registerData = {
-  token: "5d4f5sd4f65s4da6f546sd54f65sda4f65sd4af54",
+  token: "5d4f5sd4f65s4da6f546sd54f65sda4f65sd4af54asd",
 };
 
 /* all the connections of user 123456 */
